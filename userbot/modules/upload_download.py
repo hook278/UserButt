@@ -48,21 +48,21 @@ async def download(target_file):
         downloader.start(blocking=False)
         c_time = time.time()
         display_message = None
-        while not downloader.isFinished():
-            status = downloader.get_status().capitalize()
-            total_length = downloader.filesize if downloader.filesize else None
-            downloaded = downloader.get_dl_size()
-            now = time.time()
-            diff = now - c_time
-            percentage = downloader.get_progress() * 100
-            speed = downloader.get_speed()
-            progress_str = "[{0}{1}] `{2}%`".format(
-                ''.join(["●" for i in range(
-                        math.floor(percentage / 10))]),
-                ''.join(["○" for i in range(
-                        10 - math.floor(percentage / 10))]),
-                round(percentage, 2))
-            estimated_total_time = downloader.get_eta(human=True)
+     #   while not downloader.isFinished():
+      #      status = downloader.get_status().capitalize()
+       #     total_length = downloader.filesize if downloader.filesize else None
+        #    downloaded = downloader.get_dl_size()
+         #   now = time.time()
+          #  diff = now - c_time
+           # percentage = downloader.get_progress() * 100
+            #speed = downloader.get_speed()
+            #progress_str = "[{0}{1}] `{2}%`".format(
+             #   ''.join(["●" for i in range(
+              #          math.floor(percentage / 10))]),
+               # ''.join(["○" for i in range(
+                #        10 - math.floor(percentage / 10))]),
+               # round(percentage, 2))
+           # estimated_total_time = downloader.get_eta(human=True)
             try:
                 await target_file.edit("lagi load")
              #   current_message = (
