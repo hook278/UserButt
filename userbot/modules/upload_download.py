@@ -48,7 +48,8 @@ async def download(target_file):
         downloader.start(blocking=False)
         c_time = time.time()
         display_message = None
-     #   while not downloader.isFinished():
+        while not downloader.isFinished():
+            await target_file.edit("Bentar")            
       #      status = downloader.get_status().capitalize()
        #     total_length = downloader.filesize if downloader.filesize else None
         #    downloaded = downloader.get_dl_size()
