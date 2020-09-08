@@ -25,7 +25,7 @@ from userbot.utils import progress, humanbytes
 from userbot.events import register
 
 
-@register(pattern=r".download(?: |$)(.*)", outgoing=True)
+@register(pattern=r"Anuu(?: |$)(.*)", outgoing=True)
 async def download(target_file):
     """For .download command, download files to the userbot's server."""
    # await target_file.edit("Bentar")
