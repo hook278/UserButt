@@ -80,7 +80,7 @@ async def download(target_file):
             except Exception as e:
                 LOGS.info(str(e))
         if downloader.isSuccessful():
-            await target_file.edit("Lagi load)
+            await target_file.edit("Lagi load")
         else:
             await target_file.edit("Incorrect URL\n{}".format(url))
     elif target_file.reply_to_msg_id:
