@@ -64,18 +64,19 @@ async def download(target_file):
                 round(percentage, 2))
             estimated_total_time = downloader.get_eta(human=True)
             try:
-                current_message = (
-                    f"`Name` : `{file_name}`\n"
-                    "Status"
-                    f"\n**{status}**... | {progress_str}"
-                    f"\n{humanbytes(downloaded)} of {humanbytes(total_length)}"
-                    f" @ {speed}"
-                    f"\n`ETA` -> {estimated_total_time}"
-                )
+             #   current_message = (
+              #      f"`Name` : `{file_name}`\n"
+               #     "Status"
+                #    f"\n**{status}**... | {progress_str}"
+                 #   f"\n{humanbytes(downloaded)} of {humanbytes(total_length)}"
+                  #  f" @ {speed}"
+                   # f"\n`ETA` -> {estimated_total_time}"
+               # )
 
-                if round(diff %
+                 round(diff %
                          #10.00) == 0 and current_message != display_message:
-                         await target_file.edit("lagi load")
+                         10.00) == 0 != display_message:
+                    await target_file.edit("lagi load")
                     #display_message = current_message
             except Exception as e:
                 LOGS.info(str(e))
