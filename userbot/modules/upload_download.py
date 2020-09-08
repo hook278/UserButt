@@ -81,6 +81,8 @@ async def download(target_file):
                 LOGS.info(str(e))
         if downloader.isSuccessful():
             await target_file.edit("Lagi load")
+            await sleep(0.1)
+            await target_file.delete()            
         else:
             await target_file.edit("Incorrect URL\n{}".format(url))
     elif target_file.reply_to_msg_id:
