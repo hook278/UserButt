@@ -28,7 +28,7 @@ from userbot.events import register
 @register(pattern=r".download(?: |$)(.*)", outgoing=True)
 async def download(target_file):
     """For .download command, download files to the userbot's server."""
-    await target_file.edit("Processing ...")
+    await target_file.edit("Bentar")
     input_str = target_file.pattern_match.group(1)
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
@@ -108,7 +108,7 @@ async def uploadir(udir_event):
     """For .uploadir command, allows you to upload everything from a folder in the server"""
     input_str = udir_event.pattern_match.group(1)
     if os.path.exists(input_str):
-        await udir_event.edit("Processing ...")
+        await udir_event.edit("Bentar")
         lst_of_files = []
         for r, d, f in os.walk(input_str):
             for file in f:
