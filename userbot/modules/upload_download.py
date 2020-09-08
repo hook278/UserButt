@@ -30,7 +30,7 @@ async def download(target_file):
     """For .download command, download files to the userbot's server."""
    # await target_file.edit("Bentar")
     time.sleep(0.1)
-    await target_file.delete() 
+  #  await target_file.delete() 
     input_str = target_file.pattern_match.group(1)
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
