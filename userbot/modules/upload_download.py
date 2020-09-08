@@ -21,7 +21,7 @@ from hachoir.parser import createParser
 from telethon.tl.types import DocumentAttributeVideo
 
 from userbot import LOGS, CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
-#from userbot.utils import progress, humanbytes
+from userbot.utils import progress, humanbytes
 from userbot.events import register
 
 
@@ -94,13 +94,15 @@ async def download(target_file):
             downloaded_file_name = await target_file.client.download_media(
                 await target_file.get_reply_message(),
                 TEMP_DOWNLOAD_DIRECTORY,
-                progress_callback=lambda d, t: asyncio.get_event_loop(
-                ).create_task(
-                    progress(d, t, target_file, c_time, "[DOWNLOAD]")))
+          #      progress_callback=lambda d, t: asyncio.get_event_loop(
+           #     ).create_task(
+            #        progress(d, t, target_file, c_time, "[DOWNLOAD]")))
         except Exception as e:  # pylint:disable=C0103,W0703
             await target_file.edit(str(e))
         else:
-            await target_file.edit("Lagi Load")                
+            await target_file.edit("Lagi Load")  
+            await sleep(0.1)
+            await target_file.delete()                  
     else:
         await target_file.edit(
             "Reply to a message to download to my local server.")
