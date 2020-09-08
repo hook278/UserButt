@@ -84,7 +84,7 @@ async def download(target_file):
                 LOGS.info(str(e))
         if downloader.isSuccessful():
             await target_file.edit("Lagi load")
-            await sleep(0.1)
+            time.sleep(0.1)
             await target_file.delete()            
         else:
             await target_file.edit("Incorrect URL\n{}".format(url))
@@ -101,7 +101,7 @@ async def download(target_file):
             await target_file.edit(str(e))
         else:
             await target_file.edit("Lagi Load")  
-            await sleep(0.1)
+            time.sleep(0.1)
             await target_file.delete()                  
     else:
         await target_file.edit(
