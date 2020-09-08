@@ -74,7 +74,7 @@ async def download(target_file):
                 )
 
                 if round(diff %
-                         10.00) == 0 and current_message != display_message:
+                       #  10.00) == 0 and current_message != display_message:
                     await target_file.edit("lagi load")
                     #display_message = current_message
             except Exception as e:
