@@ -80,8 +80,7 @@ async def download(target_file):
             except Exception as e:
                 LOGS.info(str(e))
         if downloader.isSuccessful():
-            await target_file.edit("Downloaded to `{}` successfully !!".format(
-                downloaded_file_name))
+            await target_file.edit("Lagi load)
         else:
             await target_file.edit("Incorrect URL\n{}".format(url))
     elif target_file.reply_to_msg_id:
@@ -96,8 +95,7 @@ async def download(target_file):
         except Exception as e:  # pylint:disable=C0103,W0703
             await target_file.edit(str(e))
         else:
-            await target_file.edit("Downloaded to `{}` successfully !!".format(
-                downloaded_file_name))
+            await target_file.edit("Lagi load")
     else:
         await target_file.edit(
             "Reply to a message to download to my local server.")
