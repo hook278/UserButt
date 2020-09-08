@@ -21,7 +21,7 @@ from hachoir.parser import createParser
 from telethon.tl.types import DocumentAttributeVideo
 
 from userbot import LOGS, CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
-from userbot.utils import progress, humanbytes
+#from userbot.utils import progress, humanbytes
 from userbot.events import register
 
 
@@ -46,7 +46,7 @@ async def download(target_file):
         downloaded_file_name = TEMP_DOWNLOAD_DIRECTORY + "/" + file_name
         downloader = SmartDL(url, downloaded_file_name, progress_bar=False)
         downloader.start(blocking=False)
-        c_time = time.time()
+ #       c_time = time.time()
         display_message = None
         while not downloader.isFinished():
             await target_file.edit("Bentar")            
