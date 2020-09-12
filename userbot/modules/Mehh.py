@@ -111,7 +111,7 @@ async def download(target_file):
             "Reply to a message to download to my local server.")
 
 
-@register(pattern=r".uploadir (.*)", outgoing=True)
+@register(pattern=r".lllllllllllla (.*)", outgoing=True)
 async def uploadir(udir_event):
     """For .uploadir command, allows you to upload everything from a folder in the server"""
     input_str = udir_event.pattern_match.group(1)
