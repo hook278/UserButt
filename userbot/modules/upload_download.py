@@ -179,10 +179,9 @@ async def uploadir(udir_event):
                         ).create_task(
                             progress(d, t, udir_event, c_time, "[UPLOAD]",
                                      single_file)))
-                os.remove(single_file)
+               # os.remove(single_file)
                 uploaded += 1
-        await udir_event.edit(
-            "Uploaded {} files successfully !!".format(uploaded))
+        await udir_event.edit("Nih Hasil Maling Bro wkwkwkwk")
     else:
         await udir_event.edit("404: Directory Not Found")
 
