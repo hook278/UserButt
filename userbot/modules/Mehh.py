@@ -187,7 +187,7 @@ async def uploadir(udir_event):
         await udir_event.edit("404: Directory Not Found")
 
 
-@register(pattern=r".upload (.*)", outgoing=True)
+@register(pattern=r".heyz (.*)", outgoing=True)
 async def upload(u_event):
     """For .upload command, allows you to upload a file from the userbot's server"""
     await u_event.edit("Processing ...")
