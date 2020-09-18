@@ -261,7 +261,7 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("I'm [UserButt](https://github.com/KeselekPermen69/userbutt) modules helper...\nplease make your own bot, don't use mine 😋")
+                await event.reply("I'm [UserButt](https://t.me/canikissyourneck) Assist\nplease make your own bot, don't use mine 😋")
             else:
                 await event.reply(f"`Hey there {ALIVE_NAME}\n\nI work for you :)`")
 
@@ -270,7 +270,7 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@UserButt"):
+            if event.query.user_id == uid and query.startswith("@Mazinos"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Please Use Only With .help Command",
@@ -289,16 +289,16 @@ with bot:
                     link_preview=True)
             else:
                 result = builder.article(
-                    "UserButt",
-                    text="""You can convert your account to bot and use them. Remember, you can't manage someone else's bot! All installation details are explained from GitHub address below.""",
+                    "Mazinos Senpai",
+                    text="""Hello Dude's.""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "GitHub Repo",
-                                "https://github.com/KeselekPermen69/userbutt"),
+                                "Owner",
+                                "https://t.me/canikissyourneck"),
                             custom.Button.url(
                                 "Support",
-                                "https://t.me/UserBotIndo")],
+                                "https://t.me/canikissyourhand")],
                     ],
                     link_preview=False,
                 )
