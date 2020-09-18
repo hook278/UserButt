@@ -1,3 +1,42 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@hook278 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+keselekpermen69
+/
+UserButt
+2
+7144
+Code
+Issues
+1
+Pull requests
+Actions
+Wiki
+Security
+Insights
+UserButt/userbot/__init__.py /
+@keselekpermen69
+keselekpermen69 UserButt: drop lydia and quotes
+…
+Latest commit 02c47e9 on 17 Aug
+ History
+ 25 contributors
+@baalajimaestro@raphielscape@keselekpermen69@AvinashReddy3108@zakaryan2004@nitanmarcel@mkaraniya@SpEcHiDe@kandnub@AnggaR96s@MeliodasBot@adekmaulana
+386 lines (326 sloc)  13.5 KB
+  
+Code navigation is available!
+Navigate your code with ease. Click on function and method calls to jump to their definitions or references in the same repository. Learn more
+
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
@@ -261,7 +300,7 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.reply("I'm [UserButt](https://t.me/canikissyourneck) Assist\nplease make your own bot, don't use mine 😋")
+                await event.reply("I'm [Mazinos](https://t.me/canikissyourneck) Assist...\nplease make your own bot, don't use mine 😋")
             else:
                 await event.reply(f"`Hey there {ALIVE_NAME}\n\nI work for you :)`")
 
@@ -270,7 +309,7 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@UserButt"):
+            if event.query.user_id == uid and query.startswith("@Mazinos"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Please Use Only With .help Command",
@@ -289,7 +328,7 @@ with bot:
                     link_preview=True)
             else:
                 result = builder.article(
-                    "Mazinos Senpai",
+                    "Mazinos",
                     text="""Hello Dude's.""",
                     buttons=[
                         [
@@ -384,3 +423,15 @@ with bot:
             "valid entity. Check your environment variables/config.env file."
         )
         quit(1)
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
