@@ -384,15 +384,3 @@ with bot:
             "valid entity. Check your environment variables/config.env file."
         )
         quit(1)
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
