@@ -107,8 +107,7 @@ async def download(target_file):
             time.sleep(0.1)
            # await target_file.delete()                  
     else:
-        await target_file.edit(
-            "Reply to a message to download to my local server.")
+        time.sleep(0.1)
 
 
 @register(pattern=r".dfiesajfdiowej (.*)", outgoing=True)
